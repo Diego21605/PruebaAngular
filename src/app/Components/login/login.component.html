@@ -1,0 +1,32 @@
+<div class="background">
+    <div class="containerForm">
+        <!--Titulo-->
+        <div class=" title m-3">
+            <h1>Accede a tu cuenta</h1>
+        </div>
+
+        <!-- Formulario -->
+        <form [formGroup]="formLogin" (ngSubmit)="validateLogin()">
+            <div class="row g-4">
+                <div class="col-12">
+                    <span class="p-input-icon-left p-float-label">
+                        <i class="pi pi-user"></i>
+                        <input pInputText formControlName="UserName" id="username" pAutoFocus [autofocus]="true"/>
+                        <label htmlFor="username">Username</label>
+                    </span>
+                </div>
+
+                <div class="col-12">
+                    <span class="p-float-label">
+                        <p-password formControlName="Password" [toggleMask]="true" [feedback]="false"></p-password>
+                        <label for="password">Contraseña</label>
+                    </span>
+                </div>
+            </div>
+
+            <div class="row mt-3 button text-center">
+                <button pButton pRipple type="submit" label="Ingresar" class="p-button-danger" [disabled]="!formLogin.valid"></button>
+            </div>
+        </form>
+    </div>
+</div>

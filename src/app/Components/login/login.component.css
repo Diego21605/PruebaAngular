@@ -1,0 +1,74 @@
+.background{
+    /* background: url("/assets/Background/monitor.jpeg") no-repeat center; */
+    background-image: linear-gradient(62deg, #ff6969 0%, #f2f8c2 100%);
+    height: 100vh;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerForm{
+    background-color: #fffa;
+    width: 400px;
+    padding: 2%;
+    margin: 0 auto;
+    border-radius: 3%;
+    border-color: rgba(240, 240, 240, 0.603);
+    border-style: solid;
+    -webkit-box-shadow: 1px 18px 60px -19px rgba(0,0,0);
+    -moz-box-shadow: 1px 18px 60px -19px rgba(0,0,0);
+    box-shadow: 1px 18px 60px -19px rgba(0,0,0);
+    animation: scale-down-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.title {
+    text-align: center;
+}
+
+.title h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+    color: #EF4444;
+    animation: scale-down-center-title 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+::ng-deep .p-input, .p-inputtext, .p-inputnumber-input, .p-inputtextarea {
+    display: flex;
+    width: 100%;
+}
+
+::ng-deep span[class="p-input-icon-left p-float-label"]{
+    display: flex;
+    width: 100%;
+}
+
+p-password ::ng-deep div, p-password ::ng-deep div ::ng-deep input {
+    width: 100%;
+}
+
+form .button{
+    width: 70%;
+    margin: auto;
+    border-radius: 30px;
+}
+
+@keyframes scale-down-center {
+    0% {
+      transform: scale(5);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+
+@keyframes scale-down-center-title {
+    0% {
+      transform: scale(5);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
