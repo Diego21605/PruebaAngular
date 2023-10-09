@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { LoginService } from 'src/app/Services/Login/login.service';
 import { MessagesService } from 'src/app/Services/MessagesService/messages.service';
 
@@ -16,7 +17,8 @@ export class LoginComponent implements OnInit {
 
   constructor(private frmBuilder : FormBuilder,
     private loginService : LoginService,
-    private msg : MessagesService,){
+    private msg : MessagesService,
+    private router : Router){
 
     this.formLogin = this.frmBuilder.group({
       UserName: [null, Validators.required],
@@ -32,7 +34,7 @@ export class LoginComponent implements OnInit {
       let user : string = this.formLogin.value.UserName;
       let pass : string = this.formLogin.value.Password;
       let response : any = this.loginService.postValidataLogin(user, pass);
-      if (response) true;
+      if (response) this.router.navigateByUrl('/CrudAPI');
       else this.msg.errorMessage(`¡Las credenciales son incorrectas, por favor verifique e intente de nuevo!`);
     } else this.msg.warningMessage(`¡Hay campos vacios en el formulario!`);
   }

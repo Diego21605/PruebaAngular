@@ -1,0 +1,8 @@
+::ng-deep a {
+    text-decoration: none;
+}
+
+::ng-deep div[class="flex p-megamenu p-component p-megamenu-horizontal"] {
+    display: flex;
+    background-image: linear-gradient(62deg, #f9ffcb 0%, #b7d3ff 100%);
+}

@@ -1,6 +1,5 @@
 .background{
-    /* background: url("/assets/Background/monitor.jpeg") no-repeat center; */
-    background-image: linear-gradient(62deg, #ff6969 0%, #f2f8c2 100%);
+    background-image: linear-gradient(62deg, #b0d0ff 0%, #f6ffb1 100%);
     height: 100vh;
     min-height: 500px;
     background-size: cover;
@@ -30,9 +29,13 @@
 
 .title h1{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 2rem;
-    color: #EF4444;
-    animation: scale-down-center-title 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    font-size: 1.4rem;
+    color: #68a4ff;
+    animation: scale-down-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.title img {
+    animation: scale-down-center 1.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 ::ng-deep .p-input, .p-inputtext, .p-inputnumber-input, .p-inputtextarea {
@@ -53,18 +56,14 @@ form .button{
     width: 70%;
     margin: auto;
     border-radius: 30px;
+    background-color: #dfecff;
+}
+
+form .button button {
+    border-radius: 30px;
 }
 
 @keyframes scale-down-center {
-    0% {
-      transform: scale(5);
-    }
-    100% {
-      transform: scale(1);
-    }
-}
-
-@keyframes scale-down-center-title {
     0% {
       transform: scale(5);
     }

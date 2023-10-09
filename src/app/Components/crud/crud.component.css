@@ -1,0 +1,27 @@
+.title {
+    text-align: center;
+}
+
+.title h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+    color: #68a4ff;
+}
+
+::ng-deep .p-input, .p-inputtext, .p-inputnumber-input, .p-inputtextarea {
+    display: flex;
+    width: 100%;
+}
+
+form .button{
+    display: flex;
+    width: 70%;
+    margin: auto;
+    border-radius: 30px;
+}
+
+form .button button {
+    border-radius: 30px;
+    width: 40%;
+    margin: 5%;
+}

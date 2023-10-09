@@ -14,13 +14,25 @@ import { LoginComponent } from './Components/login/login.component';
 import { ReadCSVComponent } from './Components/read-csv/read-csv.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SideBarComponent } from './Components/side-bar/side-bar.component';
+import { SidebarModule } from 'primeng/sidebar';
+import { MegaMenuModule } from 'primeng/megamenu';
+import { CardModule } from 'primeng/card';
+import { HomeComponent } from './Components/home/home.component';
+import { TableModule } from 'primeng/table';
+import { ToolbarModule } from 'primeng/toolbar';
+import { DialogModule } from 'primeng/dialog';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { ProgressSpinnerModule } from 'primeng/progressspinner'
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     ReadCSVComponent,
-    CrudComponent
+    CrudComponent,
+    SideBarComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +46,14 @@ import { AppComponent } from './app.component';
     ButtonModule,
     AutoFocusModule,
 		ToastModule,
+    SidebarModule,
+    MegaMenuModule,
+    CardModule,
+    TableModule,
+    ToolbarModule,
+    DialogModule,
+    InputTextareaModule,
+    ProgressSpinnerModule,
   ],
   providers: [
     MessageService,
