@@ -24,6 +24,10 @@ import { ToolbarModule } from 'primeng/toolbar';
 import { DialogModule } from 'primeng/dialog';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { ProgressSpinnerModule } from 'primeng/progressspinner'
+import { FileUploadModule } from 'primeng/fileupload';
+import { ProgressComponent } from './Components/progress/progress.component';
+import { DndDirective } from './Directives/dnd.directive';
+import { ChartModule } from 'primeng/chart';
 
 @NgModule({
   declarations: [
@@ -33,6 +37,8 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner'
     CrudComponent,
     SideBarComponent,
     HomeComponent,
+    ProgressComponent,
+    DndDirective,
   ],
   imports: [
     BrowserModule,
@@ -54,6 +60,8 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner'
     DialogModule,
     InputTextareaModule,
     ProgressSpinnerModule,
+    FileUploadModule,
+    ChartModule,
   ],
   providers: [
     MessageService,
