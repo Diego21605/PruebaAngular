@@ -34,8 +34,10 @@ export class LoginComponent implements OnInit {
       let user : string = this.formLogin.value.UserName;
       let pass : string = this.formLogin.value.Password;
       let response : any = this.loginService.postValidataLogin(user, pass);
-      if (response) this.router.navigateByUrl('/CrudAPI');
-      else this.msg.errorMessage(`¡Las credenciales son incorrectas, por favor verifique e intente de nuevo!`);
+      if (response) {
+        localStorage.setItem('user', 'Admin');
+        this.router.navigateByUrl('/CrudAPI');
+      } else this.msg.errorMessage(`¡Las credenciales son incorrectas, por favor verifique e intente de nuevo!`);
     } else this.msg.warningMessage(`¡Hay campos vacios en el formulario!`);
   }
 
