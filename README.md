@@ -1,27 +1,37 @@
-# PruebaAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.8.
+```
+# Manual de uso de la aplicación web
 
-## Development server
+Este manual proporciona instrucciones detalladas sobre cómo utilizar la aplicación web. La aplicación web está desarrollada utilizando Angular y utiliza las siguientes librerías: PrimeNg, PrimeIcons, ChartJs y Bootstrap. A continuación se describen las diferentes vistas de la aplicación y sus funciones:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Vista de inicio de sesión (Login)
+En esta vista, se puede iniciar sesión utilizando las credenciales de administrador en los campos de usuario (user) y contraseña (password).
 
-## Code scaffolding
+## Vista de información general (Home)
+En esta vista, se muestra información general sobre la aplicación. Proporciona una descripción breve y resumen de las funciones disponibles.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Vista de CRUD (Create, Read, Update, Delete)
+En esta vista, se puede realizar un CRUD en una API pública llamada JsonPlaceholder. Las siguientes acciones están disponibles:
+- Crear (Create): Permite crear nuevos elementos en la API.
+- Leer (Read): Muestra los elementos existentes en la API.
+- Actualizar (Update): Permite actualizar los elementos existentes en la API.
+- Eliminar (Delete): Permite eliminar elementos de la API.
 
-## Build
+## Vista de lectura de archivo CSV (ReadCSV)
+En esta vista, se puede leer un archivo CSV, mostrar los datos contenidos en él, graficar los datos y mostrar tres datos adicionales relacionados con el CSV.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Instalación y ejecución del proyecto
+Para descargar el proyecto, se debe ejecutar el siguiente comando en la terminal:
+```
+npm install
+```
 
-## Running unit tests
+Una vez que se hayan instalado todas las dependencias, se puede ejecutar el programa utilizando el siguiente comando:
+```
+ng serve
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Esto iniciará el servidor de desarrollo y la aplicación web estará disponible en la dirección local http://localhost:4200.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+¡Disfruta utilizando la aplicación web! Si tienes alguna pregunta o problema, no dudes en contactarnos.
+```
