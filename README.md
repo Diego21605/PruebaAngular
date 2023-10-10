@@ -1,5 +1,3 @@
-
-```
 # Manual de uso de la aplicación web
 
 Este manual proporciona instrucciones detalladas sobre cómo utilizar la aplicación web. La aplicación web está desarrollada utilizando Angular y utiliza las siguientes librerías: PrimeNg, PrimeIcons, ChartJs y Bootstrap. A continuación se describen las diferentes vistas de la aplicación y sus funciones:
@@ -34,4 +32,3 @@ ng serve
 Esto iniciará el servidor de desarrollo y la aplicación web estará disponible en la dirección local http://localhost:4200.
 
 ¡Disfruta utilizando la aplicación web! Si tienes alguna pregunta o problema, no dudes en contactarnos.
-```
