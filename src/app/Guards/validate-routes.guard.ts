@@ -13,8 +13,6 @@ export class ValidateToutesGuard implements CanActivate {
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     let usuario : any = localStorage.getItem('user');
 
-    console.log(usuario)
-
     if (![null, undefined].includes(usuario)) return true;
     this.router.navigateByUrl('/');
     return false;

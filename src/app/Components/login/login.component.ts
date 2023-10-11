@@ -20,6 +20,10 @@ export class LoginComponent implements OnInit {
     private msg : MessagesService,
     private router : Router){
 
+    let usuario : any = localStorage.getItem('user');
+
+    if (![null, undefined].includes(usuario)) this.router.navigate(['/Home']);
+
     this.formLogin = this.frmBuilder.group({
       UserName: [null, Validators.required],
       Password: [null, Validators.required],
@@ -27,6 +31,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    localStorage.clear();
   }
 
   validateLogin(){
@@ -36,9 +41,9 @@ export class LoginComponent implements OnInit {
       let response : any = this.loginService.postValidataLogin(user, pass);
       if (response) {
         localStorage.setItem('user', 'Admin');
-        this.router.navigateByUrl('/CrudAPI');
-      } else this.msg.errorMessage(`¡Las credenciales son incorrectas, por favor verifique e intente de nuevo!`);
-    } else this.msg.warningMessage(`¡Hay campos vacios en el formulario!`);
+        this.router.navigateByUrl('/Home');
+      } else this.msg.errorMessage(`¡The credentials are incorrect, please verify and try again!`);
+    } else this.msg.warningMessage(`¡There are empty fields in the form!`);
   }
 
 }

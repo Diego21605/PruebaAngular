@@ -1,12 +1,10 @@
 <div class="background">
     <div class="containerForm">
-        <!--Titulo-->
         <div class="title m-4">
             <img src="/assets/Logo_Empresa.png" height="70" class="mr-2"/>
-            <h1>Accede a tu cuenta</h1>
+            <h1>Log in into your account</h1>
         </div>
 
-        <!-- Formulario -->
         <form [formGroup]="formLogin" (ngSubmit)="validateLogin()">
             <div class="row g-4">
                 <div class="col-12">
@@ -20,13 +18,13 @@
                 <div class="col-12">
                     <span class="p-float-label">
                         <p-password formControlName="Password" [toggleMask]="true" [feedback]="false"></p-password>
-                        <label for="password">Contraseña</label>
+                        <label for="password">Password</label>
                     </span>
                 </div>
             </div>
 
             <div class="row mt-3 button text-center">
-                <button pButton pRipple type="submit" label="Ingresar" [disabled]="!formLogin.valid"></button>
+                <button pButton pRipple type="submit" label="Sing In" [disabled]="!formLogin.valid"></button>
             </div>
         </form>
     </div>

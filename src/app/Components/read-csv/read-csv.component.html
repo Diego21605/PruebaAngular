@@ -5,11 +5,10 @@
 </div>
 
 <p-card>
-    <div class="container" appDnd (fileDropped)="onFileDropped($event)">
+    <div class="container">
         <input type="file" #fileDropRef id="fileDropRef" accept=".csv" (change)="fileBrowseHandler($event)" />
         <img src="assets/img/dnd/ic-upload-file.svg" alt="">
-        <h3>Drag and drop file here</h3>
-        <h3>or</h3>
+        <h3></h3>
         <label for="fileDropRef">Browse for file</label>
     </div>
     <div class="files-list">
@@ -24,7 +23,6 @@
             </p>
             <app-progress [progress]="file?.progress"></app-progress>
           </div>
-          <img src="assets/img/dnd/ic-delete-file.svg" class="delete" width="20px" alt="file" (click)="deleteFile(i)">
         </div>
     </div>
 
@@ -40,7 +38,7 @@
                 [rows]="10"
                 [rowsPerPageOptions]="[10,20,30,50,70,100]"
                 dataKey="id"
-                currentPageReportTemplate="Mostrando del {first} al {last} de {totalRecords} datos"
+                currentPageReportTemplate="Showing {first} to {last} from {totalRecords} entries"
                 [showCurrentPageReport]="true"
                 [scrollable]="true"
                 scrollHeight="40rem">

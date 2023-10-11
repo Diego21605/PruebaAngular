@@ -16,12 +16,6 @@
             <button pButton pRipple label="New" icon="pi pi-plus" class="p-button-success mr-2" (click)="modalEditInfo = true"></button>
             <button pButton pRipple icon="pi pi-trash" class="p-button-danger" (click)="deleteData()" [disabled]="!infoSelected || infoSelected.length == 0"></button>
         </ng-template>
-
-        <!-- <ng-template pTemplate="right">
-            <button type="button" pButton pRipple icon="pi pi-file" class="mr-2" pTooltip="CSV" tooltipPosition="bottom"></button>
-            <button type="button" pButton pRipple icon="pi pi-file-excel" class="p-button-success mr-2" pTooltip="XLS" tooltipPosition="bottom"></button>
-            <button type="button" pButton pRipple icon="pi pi-file-pdf" class="p-button-warning mr-2" pTooltip="PDF" tooltipPosition="bottom"></button>
-        </ng-template> -->
     </p-toolbar>
 
     <p-table
@@ -34,7 +28,7 @@
         [rows]="10"
         [rowsPerPageOptions]="[10,20,30,50,70,100]"
         dataKey="id"
-        currentPageReportTemplate="Mostrando del {first} al {last} de {totalRecords} datos"
+        currentPageReportTemplate="Showing {first} to {last} from {totalRecords} entries"
         [showCurrentPageReport]="true"
         [scrollable]="true"
         scrollHeight="50rem">
@@ -52,9 +46,9 @@
             <tr>
                 <th>#</th>
                 <th>Id</th>
-                <th>Id Usuuario</th>
-                <th>Titulo</th>
-                <th>Cuerpo</th>
+                <th>Id User</th>
+                <th>Title</th>
+                <th>Body</th>
                 <th></th>
             </tr>
         </ng-template>
@@ -73,9 +67,6 @@
                 </td>
             </tr>
         </ng-template>
-        <ng-template pTemplate="summary">
-            <div class="flex align-items-center justify-content-between">En total hay {{ infoTable ? infoTable.length : 0 }} filas.</div>
-        </ng-template>
     </p-table>
 
     <p-dialog [(visible)]="modalEditInfo" [style]="{ width: '90vw' }" header="Detalles" [modal]="true" styleClass="p-fluid">
@@ -91,19 +82,19 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                         <span class="p-float-label">
                             <input pInputText formControlName="UserId" id="userId" pAutoFocus [autofocus]="true"/>
-                            <label id="userId">Id Usuario</label>
+                            <label id="userId">Id User</label>
                         </span>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                         <span class="p-float-label">
                             <input pInputText formControlName="Title" id="Titulo" pAutoFocus [autofocus]="true"/>
-                            <label id="Titulo">Titulo</label>
+                            <label id="Titulo">Title</label>
                         </span>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                         <span class="p-float-label">
                             <textarea rows="1" pInputTextarea formControlName="Body" id="body"></textarea>
-                            <label for="body">Cuerpo</label>
+                            <label for="body">Body</label>
                         </span>
                     </div>
                 </div>
@@ -126,8 +117,8 @@
             </div>
             <div class="p-fluid" style="display: flex;">
               <div class="col-6" style="margin-right: 5px;">
-                <button *ngIf="key == 'delete'" type="button" pButton icon="pi pi-check" label="Si" (click)="deleteData()" class="p-button-warning"></button>
-                <button *ngIf="key == 'update'" type="button" pButton icon="pi pi-check" label="Si" (click)="sendEditData()" class="p-button-success"></button>
+                <button *ngIf="key == 'delete'" type="button" pButton icon="pi pi-check" label="Yes" (click)="deleteData()" class="p-button-warning"></button>
+                <button *ngIf="key == 'update'" type="button" pButton icon="pi pi-check" label="Yes" (click)="sendEditData()" class="p-button-success"></button>
               </div>
               <div class="col-6">
                 <button type="button" pButton (click)="onReject()" icon="pi pi-times" label="No" class="p-button-secondary"></button>

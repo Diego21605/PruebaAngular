@@ -70,7 +70,7 @@ export class CrudComponent implements OnInit {
     if (this.formData.valid){
       if (this.key == 'update') this.sendEditData();
       else this.sendNewData();
-    } else this.msj.warningMessage(`¡Hay campos vacios, por favor verifique!`);
+    } else this.msj.warningMessage(`¡There are empty fields, please check!`);
   }
 
   sendEditData(){
@@ -82,9 +82,9 @@ export class CrudComponent implements OnInit {
       "body": this.formData.value.Body
     }
     this.crudService.Put(this.idSelected, data).subscribe(() => {
-      this.msj.successMessage(`¡Se ha enviado actualizado la información con éxito!`);
+      this.msj.successMessage(`¡Updated information has been sent successfully!`);
       this.searchInformation();
-    }, () => this.msj.errorMessage(`¡Ha ocurrido un error al editar la información del Item ${this.idSelected}!`));
+    }, () => this.msj.errorMessage(`¡An error occurred while editing the Item information ${this.idSelected}!`));
   }
 
   sendNewData(){
@@ -97,8 +97,8 @@ export class CrudComponent implements OnInit {
     }
     this.crudService.Post(data).subscribe(() => {
       this.searchInformation();
-      this.msj.successMessage(`¡Se ha enviado guardado la información con éxito!`);
-    }, () => this.msj.errorMessage(`¡Ha ocurrido un error al intentar guardar la información!`));
+      this.msj.successMessage(`¡The information has been sent and saved successfully!`);
+    }, () => this.msj.errorMessage(`¡An error occurred while trying to save information!`));
   }
 
   deleteData(id : number = this.idSelected){
@@ -106,9 +106,9 @@ export class CrudComponent implements OnInit {
     else {
       this.load = true;
       this.crudService.Delete(id).subscribe(() => {
-        this.msj.successMessage(`¡El Item con el Id ${id} ha sido eliminado!`);
+        this.msj.successMessage(`¡The Item with the Id ${id} has been deleted!`);
         this.searchInformation();
-      }, () => this.msj.errorMessage(`¡Ha ocurrido un error al eliminar la información!`));
+      }, () => this.msj.errorMessage(`¡An error occurred while deleting information!`));
     } 
   }
 
@@ -120,7 +120,7 @@ export class CrudComponent implements OnInit {
         count++;
         if (count == this.infoTable.length) {
           this.searchInformation();
-          this.msj.successMessage(`¡Se han eliminado todos los datos!`);
+          this.msj.successMessage(`¡All data has been deleted!`);
         }
       })
     });
@@ -129,8 +129,8 @@ export class CrudComponent implements OnInit {
   showElection(item : any, mode : string){
     this.key = mode;
     this.idSelected = item.id;
-    if(this.key == 'delete') this.messageService.add({severity:'warn', key: this.key, summary:`¿Esta seguro de elimiar este item?`, sticky: true});
-    else if(this.key == 'update') this.messageService.add({severity:'warn', key: this.key, summary:`¿Esta seguro de actualizar este item?`, sticky: true});
+    if(this.key == 'delete') this.messageService.add({severity:'warn', key: this.key, summary:`¿Are you sure to delete this item??`, sticky: true});
+    else if(this.key == 'update') this.messageService.add({severity:'warn', key: this.key, summary:`¿Be sure to update this item?`, sticky: true});
   }
 
   onReject = () => this.messageService.clear(this.key);

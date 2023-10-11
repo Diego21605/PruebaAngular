@@ -1,9 +1,9 @@
 # Manual de uso de la aplicación web
 
-Este manual proporciona instrucciones detalladas sobre cómo utilizar la aplicación web. La aplicación web está desarrollada utilizando Angular y utiliza las siguientes librerías: PrimeNg, PrimeIcons, ChartJs y Bootstrap. A continuación se describen las diferentes vistas de la aplicación y sus funciones:
+Este manual proporciona instrucciones detalladas sobre cómo utilizar la aplicación web. La aplicación web está desarrollada con Angular y utiliza las siguientes librerías: PrimeNg, PrimeIcons, ChartJs y Bootstrap. A continuación se describen las diferentes vistas de la aplicación y sus funciones:
 
 ## Vista de inicio de sesión (Login)
-En esta vista, se puede iniciar sesión utilizando las credenciales de administrador en los campos de usuario (user) y contraseña (password).
+En esta vista, se puede iniciar sesión utilizando las credenciales 'admin' y 'admin' en los campos de usuario (user) y contraseña (password) respectivamente.
 
 ## Vista de información general (Home)
 En esta vista, se muestra información general sobre la aplicación. Proporciona una descripción breve y resumen de las funciones disponibles.
@@ -16,10 +16,13 @@ En esta vista, se puede realizar un CRUD en una API pública llamada JsonPlaceho
 - Eliminar (Delete): Permite eliminar elementos de la API.
 
 ## Vista de lectura de archivo CSV (ReadCSV)
-En esta vista, se puede leer un archivo CSV, mostrar los datos contenidos en él, graficar los datos y mostrar tres datos adicionales relacionados con el CSV.
+En esta vista, se puede leer un archivo CSV, mostrar los datos contenidos en él, graficar los datos y mostrar tres datos adicionales relacionados con el CSV, llos cuales son: 
+- Estado con más muertes por covid-19.
+- Estado con menos muertes por covid-19.
+- Estado más afectado por covid-19, esto teniendo en cuenta la relación entre el total de habitantes y el total de muertes hasta la fecha.
 
 ## Instalación y ejecución del proyecto
-Para descargar el proyecto, se debe ejecutar el siguiente comando en la terminal:
+Una vez descargado y abierto en un editor el proyecto, se debe ejecutar el siguiente comando en la terminal:
 ```
 npm install
 ```

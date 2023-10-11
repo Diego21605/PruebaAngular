@@ -18,7 +18,7 @@ export class SideBarComponent implements OnInit {
       {
         label: 'Inicio',
         icon: 'pi pi-home',
-        command : () => this.router.navigateByUrl('/'),
+        command : () => this.router.navigateByUrl('/Home'),
       },
       {
         label: 'Crud Api',
@@ -26,9 +26,17 @@ export class SideBarComponent implements OnInit {
         command : () => this.router.navigateByUrl('/CrudAPI'),
       },
       {
-        label: 'Leer CSV',
+        label: 'Read CSV',
         icon: 'pi pi-file-import',
         command : () => this.router.navigateByUrl('/ReadCSV'),
+      },
+      {
+        label: 'Sign Out',
+        icon: 'pi pi-file-import',
+        command : () => {
+          localStorage.clear();
+          this.router.navigateByUrl('/');
+        },
       },
     ];
   }

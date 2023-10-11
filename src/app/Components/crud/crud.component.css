@@ -2,10 +2,11 @@
     text-align: center;
 }
 
-.title h1{
+.title h1 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 2rem;
-    color: #68a4ff;
+    font-size: 2.5rem;
+    color: #0066ff;
+    animation: scale-down-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 ::ng-deep .p-input, .p-inputtext, .p-inputnumber-input, .p-inputtextarea {
